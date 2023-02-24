@@ -1,8 +1,9 @@
 public class Main {
     public static void main(String[] args) {
 
+        DigitIncreasingChecker digitIncreasingCheckerObject = new DigitIncreasingChecker(36);
 
-        int result = CheckIsDigitIncreasingNumber(37);
+        int result = digitIncreasingCheckerObject.CheckIsDigitIncreasingNumber();
         String finalResult = "the number is not digit increasing";
         if (result == 1) finalResult = "the number is digit increasing";
 
@@ -10,21 +11,5 @@ public class Main {
 
     }
 
-    private static int CheckIsDigitIncreasingNumber(int number) {
 
-
-        for (int i = 1; i <= 9; i++) {
-
-            int sum = 0;
-            int product = 0;
-
-            while (sum < number) {
-
-                product = (product * 10) + i;
-                sum = sum + product;
-            }
-            if (sum == number) return 1;
-        }
-        return 0;
-    }
 }
